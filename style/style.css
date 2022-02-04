@@ -4,6 +4,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+html{
+    color: white;
+}
 /* /css reset */
 
 
@@ -35,17 +39,23 @@ main{
 /* right side */
 .right-section{
     width: calc(100% - 300px);
+    overflow-y: scroll;
 }
 
-.cta-banner{
-    width: 100%;
+
+.right-section .cta-banner{
     height: 100px;
 
     background-color: rgba(0, 0, 0, .3);
 
     position: fixed;
     top: 0;
+    left: 300px;
     right: 0;
+}
+
+
+.right-section .main-content{
 }
 /* /top sectioin */
 
