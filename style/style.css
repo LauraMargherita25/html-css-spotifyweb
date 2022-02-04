@@ -75,3 +75,42 @@ main{
     right: 0;
 }
 /* /bottom section */
+
+
+
+
+
+
+
+
+
+/* media query */
+@media screen and (max-width: 375px) {
+    /* left side */
+    .side-bar{
+        width: 50px;
+    }
+
+
+    /* right side */
+    .right-section{
+        width: calc(100% - 50px);
+    }
+
+
+    .right-section .cta-banner{
+        left: 50px;
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width: 425px) {
+    
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    
+}
+
+@media screen and (min-width: 769px){
+    
+}
