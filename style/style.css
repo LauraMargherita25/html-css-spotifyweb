@@ -8,6 +8,7 @@
 html{
     font-family: 'Montserrat', sans-serif;
     color: white;
+    font-size: 10px;
 }
 /* /css reset */
 
@@ -17,6 +18,14 @@ html{
 /* general rules */
 ul{
     list-style: none;
+}
+
+.album-title{
+    font-size: 13px;
+}
+
+.subtitle{
+    color: #717378;
 }
 /* /general rules */
 
@@ -36,7 +45,7 @@ main{
 
 /* left side */
 .side-bar{
-    width: 200px;
+    width: 160px;
     height: 100%;
 
     background-color: black;
@@ -48,7 +57,7 @@ main{
 
 /* right side */
 .right-section{
-    width: calc(100% - 200px);
+    width: calc(100% - 160px);
     overflow-y: scroll;
 }
 
@@ -60,22 +69,25 @@ main{
 
     position: fixed;
     top: 0;
-    left: 200px;
+    left: 160px;
     right: 0;
 }
 
 
+
+
 .right-section .main-content{
-    padding: 0 1rem; /* Vedi se toglierlo*/
     margin-top: 100px;
 }
 
+/* centered nav-bar */
 .main-content .nav-content{
     padding: 2rem 0;
 
     text-align: center;
     text-transform: uppercase;
     color: #73757a;
+    font-size: 10px;
     font-weight: 500;
     line-height: 30px;
 }
@@ -87,7 +99,7 @@ main{
 }
 
 .nav-content hr{
-    width: 50px;
+    width: 25px;
     margin: auto;
     border-color: transparent;
 }
@@ -95,17 +107,40 @@ main{
 .nav-content li:first-child hr{
     border-color: #a3f02e;
 }
+/* /centered nav-bar */
 
-.main-content .row{
+/* rows style */
+.row{
+    padding: 1rem;
+}
+
+.row .tile-container{
+    max-width: calc((130px + 2rem) * 6);
+
     display: flex;
 
+    margin: 1rem -1rem;
 }
 
-.main-content .tile{
-    width: 150px;
-    height: 150px;
-    background-color: aquamarine;
+.tile-container .tile{
+    width: 130px;
+
+    margin: 1rem;
+
+    text-align: center;
 }
+
+.tile-container .tile img{
+    width: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+.row:last-of-type .tile img{
+    border-radius: 50%;
+}
+/* rows style */
 /* /top sectioin */
 
 
@@ -150,16 +185,68 @@ main{
     .right-section .cta-banner{
         left: 50px;
     }
+
+    
 }
 
 @media screen and (min-width: 376px) and (max-width: 425px) {
-    
+    .tile-container .tile {
+        width: 110px;
+    }
 }
 
 @media screen and (min-width: 426px) and (max-width: 768px) {
     
 }
 
-@media screen and (min-width: 769px){
-    
+@media screen and (max-width: 769px){
+    .row .tile-container{
+        flex-wrap: wrap;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .row{
+    background-color: green;
+  }
+  
+  .tile-container{
+    background-color: blue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    max-width: calc((150px + 5rem) * 6);
+  }
+  
+  .tile{
+    background-color: red;
+    width: 150px;
+  }
+  
+  .tile .img{
+    background-color: yellow;
+    width: 100%;
+    height: 150px;
+  } */
