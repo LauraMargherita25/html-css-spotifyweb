@@ -87,6 +87,32 @@ ul{
     height: calc(100vh - var(--player-h));
 
     background-color: black;
+
+    padding: .5rem 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.side-bar li{
+    width: 4rem;
+    height: 4rem;
+    padding: .5rem;
+    overflow: hidden;
+}
+
+.side-bar li img{
+    width: 100%; 
+
+    object-fit: cover;
+    object-position: center;
+}
+
+.ul-bottom li:last-of-type{
+   background-color: #717378;
+   border-radius: 50%;
 }
 /* /header */
 
@@ -203,49 +229,3 @@ main .cta-banner{
     background-color: #282828;
 }
 /* /footer */
-
-
-
-
-
-
-
-
-
- /* media query */
-/*@media screen and (max-width: 375px) {
-    .side-bar{
-        width: 50px;
-    }
-
-
-
-    .right-section{
-        width: calc(100% - 50px);
-    }
-
-
-    .right-section .cta-banner{
-        left: 50px;
-    }
-
-    .tile-container .tile {
-        width: 140px;
-    }
-}
-
-@media screen and (min-width: 376px) and (max-width: 425px) {
-    .tile-container .tile {
-        width: 110px;
-    }
-}
-
-@media screen and (min-width: 426px) and (max-width: 768px) {
-    
-}
-
-@media screen and (max-width: 769px){
-    .row .tile-container{
-        flex-wrap: wrap;
-    }
-} */
