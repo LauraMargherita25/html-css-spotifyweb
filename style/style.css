@@ -16,46 +16,28 @@ html{
     --side-bar-w: 5rem;
     --main-w: calc(100% - var(--side-bar-w));
     --cta-banner-h: 6rem;
-    --tile-w: 110px;
+    --tile-w: calc(50% - 1rem);
 }
 /* /css reset */
 
 /* mediaquery */
 @media screen and (max-width: 321px){
-    .row .tile-container{
-        flex-wrap: wrap;
-    }
+   
 }
 
 @media screen and (min-width: 321px) and (max-width: 375px) {
-    .row .tile-container{
-        flex-wrap: wrap;
-    }
-
-    :root{
-        --tile-w: 140px;
-        }
+   
 
 }
 
 @media screen and (min-width: 376px) and (max-width: 425px) {
-    :root{
-        --tile-w: 160px;
-        }
-
-    .row .tile-container{
-        flex-wrap: wrap;
-    }
+    
 }
 
 @media screen and (min-width: 426px) and (max-width: 768px) {
-    .row .tile-container{
-       flex-wrap: wrap;
-   }
-
    :root{
-    --side-bar-w: 20rem;
-    --tile-w: 125px;
+        --side-bar-w: 20rem;
+        --tile-w: calc((100% - 4rem) / 4)
     }
 }
 
@@ -63,7 +45,7 @@ html{
 
     :root{
         --side-bar-w: 20rem;
-        --tile-w: 150px;
+        --tile-w: calc(100% / (6 - 1rem))
     }
 
 }
@@ -183,10 +165,8 @@ main .cta-banner{
 }
 
 .row .tile-container{
-    /* width: calc((var(--tile-w) + 1rem) * 6); */
-    /* width: 100%; */
-
     display: flex;
+    flex-wrap: wrap;
 
     margin: 1rem -1rem;
 }
