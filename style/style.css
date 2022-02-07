@@ -106,6 +106,8 @@ ul{
 .side-bar li img{
     width: 100%; 
 
+    color: #717378;
+
     object-fit: cover;
     object-position: center;
 }
