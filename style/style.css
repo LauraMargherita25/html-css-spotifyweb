@@ -8,7 +8,7 @@
 html{
     font-family: 'Montserrat', sans-serif;
     color: white;
-    font-size: 10px;
+    font-size: 13px;
 }
 
 :root{
@@ -20,36 +20,6 @@ html{
 }
 /* /css reset */
 
-/* mediaquery */
-@media screen and (max-width: 321px){
-   
-}
-
-@media screen and (min-width: 321px) and (max-width: 375px) {
-   
-
-}
-
-@media screen and (min-width: 376px) and (max-width: 425px) {
-    
-}
-
-@media screen and (min-width: 426px) and (max-width: 768px) {
-   :root{
-        --side-bar-w: 20rem;
-        --tile-w: calc((100% - 4rem) / 4)
-    }
-}
-
-@media screen and (min-width: 769px){
-
-    :root{
-        --side-bar-w: 20rem;
-        --tile-w: calc(100% / (6 - 1rem))
-    }
-
-}
-/* /mediaquery */
 
 
 /* general rules */
@@ -68,6 +38,47 @@ ul{
 
 
 
+/* mediaquery */
+@media screen and (max-width: 321px){
+   
+}
+
+@media screen and (min-width: 321px) and (max-width: 375px) {
+   
+
+}
+
+@media screen and (min-width: 376px) and (max-width: 425px) {
+    
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+   :root{
+        --side-bar-w: 15rem;
+        --tile-w: calc((100% - 4rem) / 4)
+    }
+
+    .side-bar .logo-big{
+        width: calc(var(--side-bar-w) - 1rem);
+        height: calc(var(--cta-banner-h) - 1rem);
+        padding: 0.5rem 0;
+    }
+
+    .side-bar .logo-small{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 769px){
+
+    :root{
+        --side-bar-w: 15rem;
+        --tile-w: calc((100% - 6rem) / 6);
+    }
+
+    
+}
+/* /mediaquery */
 
 .container{
     width: 100%;
@@ -88,33 +99,23 @@ ul{
 
     background-color: black;
 
-    padding: .5rem 0;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.side-bar li{
-    width: 4rem;
-    height: 4rem;
     padding: .5rem;
-    overflow: hidden;
 }
 
-.side-bar li img{
-    width: 100%; 
+.side-bar .logo-big{
 
-    color: #717378;
-
-    object-fit: cover;
-    object-position: center;
+    display: none;
 }
 
-.ul-bottom li:last-of-type{
-   background-color: #717378;
-   border-radius: 50%;
+.side-bar .logo-big img{
+    height: 100%;
+    width: 80%;
+}
+
+.side-bar .logo-small{
+    width: 3rem;
+    height: 3rem;
+    margin: 0 auto;
 }
 /* /header */
 
