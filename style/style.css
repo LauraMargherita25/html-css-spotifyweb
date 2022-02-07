@@ -21,25 +21,51 @@ html{
 /* /css reset */
 
 /* mediaquery */
-@media screen and (min-width: 321px) and (max-width: 375px) {
-    
+@media screen and (max-width: 321px){
+    .row .tile-container{
+        flex-wrap: wrap;
+    }
 }
 
-@media screen and (min-width: 376px) and (max-width: 768px) {
+@media screen and (min-width: 321px) and (max-width: 375px) {
+    .row .tile-container{
+        flex-wrap: wrap;
+    }
+
     :root{
-        --side-bar-w: 15rem;
+        --tile-w: 140px;
+        }
+
+}
+
+@media screen and (min-width: 376px) and (max-width: 425px) {
+    :root{
+        --tile-w: 160px;
+        }
+
+    .row .tile-container{
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    .row .tile-container{
+       flex-wrap: wrap;
+   }
+
+   :root{
+    --side-bar-w: 20rem;
+    --tile-w: 125px;
     }
 }
 
 @media screen and (min-width: 769px){
+
     :root{
-        --side-bar-w: 15rem;
-        --tile-w: 130px;
+        --side-bar-w: 20rem;
+        --tile-w: 150px;
     }
 
-    .row .tile-container{
-        max-width: calc((130px + 1rem) * 6);
-    }
 }
 /* /mediaquery */
 
@@ -157,14 +183,16 @@ main .cta-banner{
 }
 
 .row .tile-container{
+    /* width: calc((var(--tile-w) + 1rem) * 6); */
+    /* width: 100%; */
+
     display: flex;
-    flex-wrap: wrap;
 
     margin: 1rem -1rem;
 }
 
 .tile-container .tile{
-    width: 110px;
+    width: var(--tile-w);
 
     margin: .5rem;
 
