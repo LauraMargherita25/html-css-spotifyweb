@@ -27,6 +27,11 @@ ul{
     list-style: none;
 }
 
+a{
+    text-decoration: none;
+    color: white;
+}
+
 .album-title{
     font-size: 13px;
 }
@@ -36,93 +41,6 @@ ul{
 }
 /* /general rules */
 
-
-
-/* mediaquery */
-@media screen and (max-width: 321px){
-   
-}
-
-@media screen and (min-width: 321px) and (max-width: 375px) {
-   
-
-}
-
-@media screen and (min-width: 376px) and (max-width: 425px) {
-    
-}
-
-@media screen and (min-width: 426px) and (max-width: 768px) {
-   :root{
-        --side-bar-w: 15rem;
-        --tile-w: calc((100% - 4rem) / 4)
-    }
-
-    /* .side-bar .logo-big{
-        width: calc(var(--side-bar-w) - 1rem);
-        height: calc(var(--cta-banner-h) - 1rem);
-        padding: 0.5rem 0;
-    }
-
-    .side-bar .logo-small{
-        display: none;
-    } */
-
-    /* .side-bar .nav-list{
-        align-items: flex-start;
-    }
-
-    .hidden-xs{
-        display: block;
-    }
-
-    .side-bar .nav-list .nav-item{
-        padding-left: 1.5rem;
-        border-left: 5px solid transparent;
-    }
-
-    .side-bar .nav-list .nav-item.active{
-        border-left: 5px solid greenyellow;
-    }
-
-    .side-bar .nav-list a{
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    .visible-xs{
-        display: none;
-    }
-
-    .hidden-xs{
-        display: block;
-    }
-
-    .logo-big{
-        width: 200px;
-    }
-
-    .side-bar .playlist-list{
-        overflow-y: auto;
-        height: 40vh;
-    }
-
-    .side-bar .playlist-item{
-        line-height: 2.5;
-    } */
-}
-
-@media screen and (min-width: 769px){
-
-    :root{
-        --side-bar-w: 15rem;
-        --tile-w: calc((100% - 6rem) / 6);
-    }
-
-    
-}
-/* /mediaquery */
 
 .container{
     width: 100%;
@@ -142,83 +60,138 @@ ul{
     height: calc(100vh - var(--player-h));
 
     background-color: black;
-
-    padding: .5rem;
 }
 
-/* .side-bar .logo-big{
-
-    display: none;
-}
-
-.side-bar .logo-big img{
-    height: 100%;
-    width: 80%;
-}
-
-.side-bar .logo-small{
-    width: 3rem;
-    height: 3rem;
-    margin: 0 auto;
-} */
 .side-bar nav{
     height: 100%;
     min-height: 500px;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .side-bar .nav-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+.side-bar .top{
+    height: 250px;
+}
+
+.side-bar .top .item-logo {
+    width: 3rem;
+    height: 3rem;
+    margin: .5rem 0;
+}
+
+.item-logo a{
+    width: 100%;
     height: 100%;
+}
+
+.hidden-xs{
+    display: none;
+} 
+
+
+
+.side-bar .container-pl{
+
+    width: 100%;
+    height: calc(100% - (250px + 120px));
+
+    padding: 0 .5rem;
+
+    overflow-y: auto;
+}
+
+.container-pl h3{
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.container-pl .pl-btn{
+    opacity: 0.6;
+    display: flex;
+    align-items: center;
+}
+
+.container-pl .pl-btn:hover{
+    opacity: 1;
+}
+
+.container-pl .btn-pl-add{
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+}
+
+
+.side-bar .btm{
+    height: 120px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.side-bar .nav-list .nav-item{
-    margin-bottom: .5rem;
-    opacity: 0.6;
-}
-
-.side-bar .nav-list a{
-    display: block;
-
-    width: 2.5rem;
-    height: 2.5rem;
-    
-    color: white;
-    text-decoration: none;
-}
-
-.side-bar .nav-list .nav-item:hover{
-    opacity: 1;
-}
-
-.side-bar img{
-    width: 2.5rem;
-}
-
-.side-bar .nav-list .item-logo, .profile{
-    opacity: 1;
-}
-
-.side-bar .spaced{
-    margin-top: auto;
-}
-
 .side-bar .dwl-img{
     width: 2rem;
+
+    position: relative;
+    left: 4px;
+}
+
+.side-bar .btm hr{
+    width: 170px;
+    margin: auto;
+    border-color: #73757a;
+}
+
+.side-bar .btm .profile{
+    opacity: 1;
 }
 
 .side-bar .round{
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3rem;
+    height: 3rem;
     background-color: #717378;
     border-radius: 50%;
     overflow: hidden;
+} 
+
+
+.side-bar .nav-item{
+    width: 3rem;
+    height: 3rem;
+    
+    margin: .5rem 0;
+    opacity: 0.6;
 }
 
-.hidden-xs{
-    display: none;
+.side-bar .nav-item a{
+    display: block; 
+
+    width: 3rem;
+    height: 3rem;
+}
+
+.side-bar img{
+    width: 3rem;
+}
+
+.side-bar .nav-item:hover{
+    opacity: 1;
+}
+
+
+.side-bar .spaced{
+    margin-top: auto; 
 }
 /* /header */
 
@@ -305,7 +278,7 @@ main .cta-banner{
     display: flex;
     flex-wrap: wrap;
 
-    margin: 1rem -1rem;
+    margin: 1rem -.5rem;
 }
 
 .tile-container .tile{
@@ -338,5 +311,104 @@ main .cta-banner{
     width: 100%;
 
     background-color: #282828;
+
+    position: relative;
+    z-index: 1000;
+}
+
+.player-bar .footer-left{
+    background-color: red;
+}
+
+
+
+.player-bar .footer-center{
+    
+}
+
+.player-bar .footer-right{
+    
 }
 /* /footer */
+
+
+
+
+
+
+/*media query*/
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    :root{
+        --side-bar-w: 15rem;
+        --tile-w: calc((100% - 4rem) / 4)
+    }
+
+    .side-bar .nav-list{
+        align-items: flex-start;
+    }
+    
+    .side-bar .top .item-logo{
+        width: 100%;
+        height: 6rem;
+        margin: 0;
+    }
+
+    .item-logo .logo-big{
+        width: 80%;
+        position: relative;
+        top: 10px;
+        left: 5px;
+    }
+
+    .visible-xs{
+        display: none;
+    }
+
+    .hidden-xs{
+        display: block;
+    }
+
+    .side-bar .nav-item{
+        width: 100%;
+        padding-left: 1.5rem;
+        border-left: 3px solid transparent;
+    }
+
+    .side-bar .nav-item.active{
+        border-left: 3px solid #a3f02e;
+        opacity: 1;
+    }
+
+    .side-bar .nav-item a{
+        width: 3rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    /*
+
+
+
+    
+
+    .side-bar .playlist-list{
+        overflow-y: auto;
+        height: 40vh;
+    }
+
+    .side-bar .playlist-item{
+        line-height: 2.5;
+    } */
+}
+ 
+@media screen and (min-width: 769px){
+    :root{
+        --side-bar-w: 15rem;
+        --tile-w: calc((100% - 6rem) / 6);
+    }
+}
+ 
+ 
+ /* /mediaquery */
+ 

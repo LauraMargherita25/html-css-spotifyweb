@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="style/style.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,17 +21,9 @@
     <div class="container">
         <!-- header -->
         <header class="side-bar">
-            <!-- <div class="logo-big">
-                <img src="img/logo.svg" alt="spotify">
-            </div>
-
-            <div class="logo-small">
-                <img src="img/logo-small.svg" alt="spotify">
-            </div> -->
-
             <nav>
-                <ul class="nav-list">
-                    <li class="item-logo nav-item">
+                <ul class="nav-list top">
+                    <li class="item-logo ">
                         <a href="">
                             <img class="visible-xs logo-small" src="img/logo-small.svg" alt="">
                             <img class="hidden-xs logo-big" src="img/logo.svg" alt="">
@@ -46,43 +38,53 @@
                     <li class="nav-item">
                         <a href="">
                             <img src="img/search.svg" alt="">
-                            <div class="hidden-xs">Home</div>
+                            <div class="hidden-xs">Cerca</div>
 
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="">
                             <img src="img/libreria.svg" alt="">
-                            <div class="hidden-xs">Home</div>
+                            <div class="hidden-xs">Libreria</div>
 
                         </a>
                     </li>
+                </ul>
+                
+                <div class="container-pl hidden-xs">
+                    <h3>Playlist</h3>
+                    <div class="pl-btn">
+                        <button class="btn-pl-add"><i class="fa-solid fa-plus"></i></button>
+                        <h4>Crea Playlist</h4>
+                    </div>
+                    <ul class="playlist-list">
+                        <li class="pl-item"><a href="">Nome Playlist</a></li>
+                        <li class="pl-item"><a href="">Nome Playlist</a></li>
+                        <li class="pl-item"><a href="">Nome Playlist</a></li>
+                        <li class="pl-item"><a href="">Nome Playlist</a></li>
+                        <li class="pl-item"><a href="">Nome Playlist</a></li>
+                        <li class="pl-item"><a href="">Nome Playlist</a></li>
+                        <li class="pl-item"><a href="">Nome Playlist</a></li>
+                    </ul>
+                </div>
 
-                    <!-- <li class="container-pl">
-                        <h2>Playlist</h2>
-                        <button class="btn-pl-add">Crea Playlist</button>
-                        <ul class="playlist-list">
-                            <li class="pl-item"><a href="">Nome Playlist</a></li>
-                            <li class="pl-item"><a href="">Nome Playlist</a></li>
-                            <li class="pl-item"><a href="">Nome Playlist</a></li>
-                            <li class="pl-item"><a href="">Nome Playlist</a></li>
-                            <li class="pl-item"><a href="">Nome Playlist</a></li>
-                            <li class="pl-item"><a href="">Nome Playlist</a></li>
-                            <li class="pl-item"><a href="">Nome Playlist</a></li>
-                        </ul>
-                    </li> -->
-                    
-                    <li class="spaced nav-item">
+                <ul class="nav-list btm spaced">   
+                    <li class="nav-item">
                         <a href="">
                             <img class="dwl-img" src="img/download.svg" alt="">
-                            <div class="hidden-xs">Home</div>
-
+                            <div class="hidden-xs">Download</div>
                         </a>
                     </li>
-                    <li class="round">
-                        <div class="nav-item">
-                            <img class="profile" src="img/profile.svg" alt="">
-                        </div>
+                    <hr class="hidden-xs">
+                    <li class="nav-item profile">
+                        <a href="">
+                            <div class="round">
+                            <img class="" src="img/profile.svg" alt="">
+                            </div>
+                            
+                        <!-- <div class="hidden-xs"></div> -->
+                        </a>
+                        
                     </li>
                 </ul>
             </nav>
@@ -200,7 +202,7 @@
     
         <!-- footer -->
         <footer class="player-bar">
-    
+
         </footer>
         <!-- /footer -->
     </div>
