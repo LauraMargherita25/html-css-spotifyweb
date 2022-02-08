@@ -13,7 +13,7 @@ html{
 
 :root{
     --player-h: 6rem;
-    --side-bar-w: 5rem;
+    --side-bar-w: 4rem;
     --main-w: calc(100% - var(--side-bar-w));
     --cta-banner-h: 6rem;
     --tile-w: calc(50% - 1rem);
@@ -58,7 +58,7 @@ ul{
         --tile-w: calc((100% - 4rem) / 4)
     }
 
-    .side-bar .logo-big{
+    /* .side-bar .logo-big{
         width: calc(var(--side-bar-w) - 1rem);
         height: calc(var(--cta-banner-h) - 1rem);
         padding: 0.5rem 0;
@@ -66,7 +66,51 @@ ul{
 
     .side-bar .logo-small{
         display: none;
+    } */
+
+    /* .side-bar .nav-list{
+        align-items: flex-start;
     }
+
+    .hidden-xs{
+        display: block;
+    }
+
+    .side-bar .nav-list .nav-item{
+        padding-left: 1.5rem;
+        border-left: 5px solid transparent;
+    }
+
+    .side-bar .nav-list .nav-item.active{
+        border-left: 5px solid greenyellow;
+    }
+
+    .side-bar .nav-list a{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .visible-xs{
+        display: none;
+    }
+
+    .hidden-xs{
+        display: block;
+    }
+
+    .logo-big{
+        width: 200px;
+    }
+
+    .side-bar .playlist-list{
+        overflow-y: auto;
+        height: 40vh;
+    }
+
+    .side-bar .playlist-item{
+        line-height: 2.5;
+    } */
 }
 
 @media screen and (min-width: 769px){
@@ -102,7 +146,7 @@ ul{
     padding: .5rem;
 }
 
-.side-bar .logo-big{
+/* .side-bar .logo-big{
 
     display: none;
 }
@@ -116,6 +160,65 @@ ul{
     width: 3rem;
     height: 3rem;
     margin: 0 auto;
+} */
+.side-bar nav{
+    height: 100%;
+    min-height: 500px;
+}
+
+.side-bar .nav-list{
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.side-bar .nav-list .nav-item{
+    margin-bottom: .5rem;
+    opacity: 0.6;
+}
+
+.side-bar .nav-list a{
+    display: block;
+
+    width: 2.5rem;
+    height: 2.5rem;
+    
+    color: white;
+    text-decoration: none;
+}
+
+.side-bar .nav-list .nav-item:hover{
+    opacity: 1;
+}
+
+.side-bar img{
+    width: 2.5rem;
+}
+
+.side-bar .nav-list .item-logo, .profile{
+    opacity: 1;
+}
+
+.side-bar .spaced{
+    margin-top: auto;
+}
+
+.side-bar .dwl-img{
+    width: 2rem;
+}
+
+.side-bar .round{
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #717378;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.hidden-xs{
+    display: none;
 }
 /* /header */
 
@@ -153,6 +256,11 @@ main .cta-banner{
     border: 1px solid white;
     border-radius: 30px;
     padding: 1rem;
+    transition: 1s;
+}
+
+.cta-banner .cta-btn:hover{
+    transform: scale(1.1);
 }
 /* /cta-banner */
 
