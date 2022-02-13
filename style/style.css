@@ -322,8 +322,6 @@ main .cta-banner{
     width: 230px;
     height: 100%;
 
-    padding: 0 .3rem;
-
     flex: 0 1 auto;
 
     background-color: aqua;
@@ -357,10 +355,42 @@ main .cta-banner{
     width: 40%;
     height: 100%;
 
+    padding: 1rem 0;
+
     flex: 0 1 auto;
 
-    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: sandybrown;
     border: 1px solid red;
+}
+
+.footer-center .timing-btns{
+    min-width: 220px;
+}
+
+.footer-center .timing-btns i{
+    font-size: 25px;
+    margin: 0px 10px;
+}
+
+.footer-center .timing{
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.timing .total-timing{
+    width: 50%;
+}
+
+.timing .total-timing hr{
+    border: 3px solid lightgray;
+    margin: 0 1rem;
 }
 
 .footer-right{
@@ -381,7 +411,7 @@ main .cta-banner{
 
 
 /*media query*/
-@media screen and (min-width: 650px) and (max-width: 768px) {
+@media screen and (min-width: 650px) and (max-width: 1000px) {
     :root{
         --side-bar-w: 15rem;
         --tile-w: calc((100% - 4rem) / 4)
@@ -432,7 +462,7 @@ main .cta-banner{
 
 }
  
-@media screen and (min-width: 769px){
+@media screen and (min-width: 1000px){
     :root{
         --side-bar-w: 15rem;
         --tile-w: calc((100% - 6rem) / 6);
