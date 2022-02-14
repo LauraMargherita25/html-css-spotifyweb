@@ -390,7 +390,9 @@ main .cta-banner{
 
 .timing .total-timing hr{
     border: 3px solid lightgray;
+    border-radius: 10px;
     margin: 0 1rem;
+    background-color: lightgray;
 }
 
 .footer-right{
@@ -399,8 +401,27 @@ main .cta-banner{
 
     flex: 0 1 auto;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     background-color: aqua;
     border: 1px solid red;
+}
+
+.footer-right i{
+    padding: 0 5px;
+}
+
+.footer-right .volume{
+    width: 70%;
+}
+
+.footer-right .volume hr{
+    border: 3px solid lightgray;
+    border-radius: 10px;
+    margin: 0 1rem;
+    background-color: lightgray;
 }
 
 /* /footer */
